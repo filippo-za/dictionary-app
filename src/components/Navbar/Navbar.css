@@ -1,0 +1,8 @@
+.navbar_text {
+  border: 2px solid #aaa;
+}
+
+.navbar_text:hover {
+  transition: 0.4s;
+  color: rgb(103, 162, 221);
+}

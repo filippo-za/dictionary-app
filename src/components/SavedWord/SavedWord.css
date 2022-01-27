@@ -1,0 +1,37 @@
+.container_btnSaved {
+  margin-top: 20px;
+}
+
+.container_saved {
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #aaa;
+  width: 30%;
+  text-transform: capitalize;
+}
+
+.save_text {
+  margin-top: 7px;
+  margin-left: 10px;
+  font-size: 18px;
+  color: #525252;
+  font-weight: 700;
+}
+
+.no_word {
+  margin-top: 20px;
+  color: #aaa;
+}
+
+@media screen and (max-width: 1024px) {
+  .container_saved {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container_saved {
+    width: 100%;
+    margin-top: 30px;
+  }
+}

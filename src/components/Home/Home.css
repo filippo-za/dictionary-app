@@ -1,0 +1,63 @@
+.container_home {
+  margin-top: 50px;
+}
+
+.img-fluid {
+  width: 350px;
+  margin-left: 33.3%;
+}
+
+.home_text {
+  display: flex;
+  justify-content: center;
+  color: #aaa;
+}
+
+.container_home_input {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.container_home_input input {
+  outline: none;
+  transition: 0.4s;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.container_home_input input:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 0 5px 0 dodgerblue;
+}
+
+@media screen and (max-width: 1024px) {
+  .img-fluid {
+    margin-left: 14%;
+    margin-top: 35%;
+    width: 500px;
+  }
+
+  .container_home_input {
+    margin-left: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container_home {
+    margin-top: 80px;
+  }
+
+  .img-fluid {
+    margin-top: 80px;
+    margin-left: 0;
+  }
+
+  .home_text {
+    font-size: 13px;
+  }
+
+  .container_home_input input {
+    margin-right: 0;
+  }
+}

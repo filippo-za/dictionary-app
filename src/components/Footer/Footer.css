@@ -1,0 +1,15 @@
+.container_footer {
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.copyright {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #fff;
+}

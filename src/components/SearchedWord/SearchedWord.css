@@ -1,0 +1,147 @@
+.not_found {
+  position: fixed;
+  top: 50%;
+  left: 43%;
+  text-align: center;
+}
+
+.not_found_text {
+  font-size: 20px;
+  color: #aaa;
+}
+
+.not_found_btn {
+  font-size: 10px;
+
+  outline: none;
+  transition: 0.4s;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.not_found_btn:hover {
+  border-color: dodgerblue;
+  box-shadow: 0px 0px 3px 0px dodgerblue;
+}
+
+.container_navigate {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.icon_btn {
+  transition: 0.4s;
+  outline: none;
+  border: 2px solid #aaa;
+  width: 5%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.icon_btn:hover {
+  border-color: dodgerblue;
+  box-shadow: 0px 0px 3px 0px dodgerblue;
+}
+
+.container_searchedWord {
+  background: linear-gradient(#525252, #3d72b4);
+  box-shadow: 0px 0px 5px 0px;
+  width: 50%;
+  height: 20vh;
+  border-radius: 5px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.word {
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 20px;
+  padding: 40px;
+}
+
+.play {
+  border-radius: 8px 8px 8px;
+  height: 60px;
+  width: 60px;
+  background: #4b6cb7;
+  color: #fff;
+  outline: none;
+  border: 2px solid #aaa;
+  margin-right: 70px;
+  margin-top: 28px;
+  transition: 0.4s;
+}
+
+.play:hover {
+  border-color: dodgerblue;
+  box-shadow: 0px 0px 3px 0px dodgerblue;
+}
+
+.container_info {
+  background: #fff;
+  box-shadow: 0px 0px 5px 0px;
+  padding: 2px;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.container_info_details {
+  font-size: 10px;
+  color: #aaa;
+}
+
+.part_of_speech {
+  margin-left: 15px;
+  font-size: 10px;
+  text-transform: capitalize;
+  color: #525252;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.definition {
+  font-size: 13px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container_searchedWord {
+    width: 100%;
+    height: 10vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .not_found {
+    left: 33%;
+  }
+
+  .icon_btn {
+    width: 10%;
+  }
+
+  .container_searchedWord {
+    margin-top: 30px;
+    width: 100%;
+    height: 11vh;
+  }
+
+  .word {
+    padding: 30px;
+  }
+
+  .play {
+    margin-right: 45px;
+    margin-top: 16px;
+    width: 15%;
+    height: 60%;
+  }
+
+  .container_info {
+    width: 100%;
+  }
+}

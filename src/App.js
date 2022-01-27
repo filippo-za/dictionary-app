@@ -1,23 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
+import SearchedWord from "./components/SearchedWord/SearchedWord";
+import SavedWord from "./components/SavedWord/SavedWord";
+import Footer from "./components/Footer/Footer";
+
+import "./App.css";
 
 function App() {
+  const [savedWord, setSavedWord] = useState(
+    JSON.parse(localStorage.getItem("savedWord")) || {}
+  );
+
+  useEffect(() => {
+    localStorage.setItem("savedWord", JSON.stringify(savedWord));
+  }, [savedWord]);
+
+  const addToSaveWord = (word, words) =>
+    setSavedWord((previousSavedWord) => ({
+      ...previousSavedWord,
+      [word]: words,
+    }));
+
+  const removeToSaveWord = (word) =>
+    setSavedWord((previousSavedWord) => {
+      const temp = { ...previousSavedWord };
+      delete temp[word];
+      return temp;
+    });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/savedWord">
+            <SavedWord savedWord={savedWord} />
+          </Route>
+          <Route path="/searchedWord/:word">
+            <SearchedWord
+              savedWord={savedWord}
+              addToSaveWord={addToSaveWord}
+              removeToSaveWord={removeToSaveWord}
+            />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }

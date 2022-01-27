@@ -1,0 +1,12 @@
+.container_btn {
+  outline: none;
+  transition: 0.4s;
+  border-radius: 5px;
+  border: 2px solid #aaa;
+  margin-top: 15px;
+}
+
+.container_btn:hover {
+  border-color: dodgerblue;
+  box-shadow: 0px 0px 3px 0px dodgerblue;
+}
